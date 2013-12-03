@@ -1,7 +1,15 @@
 #!/usr/bin/env ruby
 
-require 'socket'               # Get sockets from stdlib
-require 'file/tail'
+# Inspired by http://www.george-smart.co.uk/wiki/APRS_with_the_FUNcube_Dongle
+# Requires QTMM to be running but via the command line e.g:
+# $ /Applications/AFSK1200\ Decoder.app/Contents/MacOS/AFSK1200\ Decoder > raw.txt
+# Once the server is running you'll need to open Xastir
+# Setup Xastir to use an Internet Server and direct it to server you are running
+# this aprs.rb script
+
+
+require 'socket'	# Get sockets from stdlib
+require 'file/tail'	# http://flori.github.io/file-tail/		
 
 filename = "/Applications/AFSK1200\ Decoder.app/Contents/MacOS/raw.txt"
 
